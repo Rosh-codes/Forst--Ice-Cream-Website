@@ -13,12 +13,14 @@
         <div id="logo">
             <a href="index.html"><img src="images/logo.png" alt=""></a>
         </div>
+        <div class="nav-title">Order your Treat</div>
         <div id="cart">
             <img src="images/cart.png" alt="cart">
         </div>
     </nav>
     <div class="content">
-        <h1>Order your Treat</h1>
+        <!-- Remove or comment out the h1 heading here -->
+        <!-- <h1>Order your Treat</h1> -->
         <h2>You are just one step away from Sweet satisfaction </h2>
     </div>
     <div class="topFlavoursSection Box">
@@ -165,7 +167,17 @@
                 <button>Add to cart</button>
             </div>
         </div>
-
+        <div id="cart-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); z-index:1000; justify-content:center; align-items:center;">
+            <div style="background:#fffaf0; border-radius:16px; padding:32px 20px; max-width:350px; width:90vw; box-shadow:0 4px 24px rgba(0,0,0,0.2); text-align:center; position:relative;">
+                <h2>Your Cart</h2>
+                <div id="cart-items-list" style="margin-bottom:18px;"></div>
+                <div id="cart-items-count" style="font-weight:bold; margin-bottom:18px;"></div>
+                <button id="cart-done-btn" style="background:#ff9800; color:#fff; border:none; border-radius:10px; padding:10px 24px; font-size:1.1rem; font-weight:bold; cursor:pointer;">Done</button>
+                <button id="cart-close-btn" style="position:absolute; top:10px; right:10px; background:none; border:none; font-size:1.5rem; color:#bb6513; cursor:pointer;">&times;</button>
+                <div id="order-confirmed-msg" style="display:none; font-size:1.5rem; color:green; margin-top:24px; font-weight:bold;">Order Confirmed! 🎉</div>
+            </div>
+        </div>
+        <script src="order.js"></script>
 </body>
 
 </html>

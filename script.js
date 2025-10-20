@@ -1,5 +1,4 @@
-
-  const veganBtn = document.getElementById("vegan");
+const veganBtn = document.getElementById("vegan");
   const chocoBtn = document.getElementById("choco");
   const fruityBtn = document.getElementById("fruity");
   const seasonalBtn = document.getElementById("seasonal");
@@ -95,4 +94,23 @@
 
   // Auto move
   setInterval(nextSlide, 3000);
+
+  // Flip card functionality
+  const flavourCards = document.querySelectorAll('.flavour-card');
+
+  flavourCards.forEach(card => {
+      const flipBtn = card.querySelector('.flip-btn');
+      const flipBackBtn = card.querySelector('.flip-back-btn');
+      if (flipBtn) {
+          flipBtn.addEventListener('click', () => {
+              card.classList.add('is-flipped');
+          });
+      }
+      if (flipBackBtn) {
+          flipBackBtn.addEventListener('click', () => {
+              card.classList.remove('is-flipped');
+          });
+      }
+  });
+
 
